@@ -1,45 +1,72 @@
-# crypt-your-doc
 # 🔐 AES File Encryptor (PRIVATE)
 
-🚫 **UYARI:**  
-Bu yazılım yalnızca geliştirici (Furkan Aşkın) tarafından **kişisel cihazda** kullanılmak üzere geliştirilmiştir.  
-**Paylaşım, dağıtım, çoğaltma veya herhangi bir üçüncü kişiye iletim kesinlikle yasaktır.**
+> 🚨 **UYARI:** Bu yazılım yalnızca geliştirici **Furkan Aşkın** tarafından kendi cihazında kullanılmak üzere geliştirilmiştir.  
+> Her türlü dağıtım, çoğaltma, paylaşım veya üçüncü kişiye iletim **kesinlikle yasaktır**.
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Durum-Yalnızca%20Kişisel%20Kullanım-red?style=for-the-badge&logo=go" />
+  <img src="https://img.shields.io/badge/Geliştirici-Furkan%20Aşkın-blue?style=for-the-badge" />
+</p>
+
+---
+
+## 🎬 Tanıtım
+
+<p align="center">
+  <img src="docs/demo.gif" width="600" alt="AES Şifreleme Demo" />
+  <br />
+  <i>✔️ Dosya seçimi ➜ 🔐 Şifreleme ➜ 📦 ZIP olarak indirme ➜ 🔓 Çözme</i>
+</p>
 
 ---
 
 ## 📖 Proje Hakkında
 
-Bu proje, kullanıcıların dosyalarını **yüksek güvenlikli AES-256 şifreleme** algoritmasıyla şifrelemesini ve gerektiğinde çözmesini sağlayan web tabanlı bir uygulamadır.  
-**Go (Golang)** programlama dili ile geliştirilen bu uygulama, herhangi bir dış veritabanı veya harici bağımlılık gerektirmeden lokal olarak çalışır.
+Bu uygulama, **AES-256 şifreleme algoritması** kullanarak dosyalarınızı yüksek güvenlikle korur.  
+Tarayıcı üzerinden çalışan modern bir arayüzle, dosyaları kolayca **şifreleyebilir veya çözebilirsiniz**.  
 
-Amaç, kolay kullanımlı ama güçlü şifreleme destekli bir çözüm sunmaktır. Özellikle kişisel dosya güvenliği için idealdir.
-
----
-
-## 📌 Özellikler
-
-- 🔐 **AES-256-CBC** algoritması ile şifreleme ve çözme desteği
-- 📦 Çoklu dosya yükleme imkânı (her biri max 10MB)
-- 📁 Yüklenen dosyalar işlendikten sonra **otomatik ZIP arşiv** halinde indirilir
-- 🌐 Şık ve modern **web arayüzü**
-- 👤 Giriş paneli: kullanıcı adı & parola korumalı (admin / 1234)
-- 🧠 Şifreleme işlemlerinde PBKDF2 + SHA-256 kullanımı (parola türetimi)
-- 🚫 Herhangi bir dosya veya parola sunucuya **kaydedilmez**
-- 🔍 Basit hata log kaydı (JSON formatında)
-- 🌱 Tüm kod Go standardına uygundur, bağımsız ve taşınabilirdir
+**Go (Golang)** ile geliştirilen sistem herhangi bir sunucu veya dış servis kullanmaz. Tüm işlemler lokal olarak yapılır.
 
 ---
 
-## 🧪 Nasıl Kullanılır?
+## ⚙️ Temel Özellikler
 
-### 🖥️ Gereksinimler
+| Özellik | Açıklama |
+|--------|----------|
+| 🔐 **AES-256-CBC** | Endüstri standardı blok şifreleme |
+| 🧠 PBKDF2 + SHA-256 | Parola türetme ile ekstra güvenlik |
+| 📂 Çoklu Dosya Desteği | Birden fazla dosya şifrelenebilir |
+| 📦 ZIP Arşivi | Şifrelenen tüm dosyalar tek bir ZIP ile indirilir |
+| 👤 Giriş Paneli | `admin / 1234` kullanıcı doğrulaması |
+| 📡 Sunucusuz | Tüm veriler **lokal olarak** işlenir |
+| 🖼️ UI Animasyonları | Parola göster/gizle, yükleme spinner, dosya listesi renkli uyarı |
+| 🚫 Veri Saklama Yok | Ne parola ne dosya diskte tutulur |
 
-- Go 1.20+ sürümü
-- Modern bir web tarayıcı (Chrome, Firefox, Safari vs.)
+---
 
-### 🚀 Başlatmak için:
+## 🌐 Web Arayüzü
+
+<p align="center">
+  <img src="docs/ui-preview.png" width="700" alt="Web UI Preview" />
+</p>
+
+- ✔️ Mobil uyumlu
+- 🎨 Gradient arkaplanlar
+- 🧩 Dinamik dosya uyarıları
+- 👁️ Parola göster/gizle butonu
+- 🌀 Yükleme sırasında animasyonlu spinner
+
+---
+
+## 🧪 Kurulum ve Kullanım
+
+### 💻 Gereksinimler
+
+- [Go](https://go.dev/dl/) 1.20+ (yüklü olmalı)
+- Modern bir web tarayıcı (Chrome, Firefox, Safari)
+
+### 🚀 Uygulamayı Başlat
 
 ```bash
-git clone https://github.com/mach2furkan/[repo-adı]
-cd [repo-adı]
+git clone https://github.com/mach2furkan/[repo-adi]
 go run main.go
